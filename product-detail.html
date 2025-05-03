@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail - PrimaTex</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/20221008_060155.jpg-bNEwttb0WtrFNqUkyiR5zAnNwWvl80.jpeg" alt="PrimaTex Logo" class="logo">
+                <span class="brand-text">PrimaTex</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Products</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-globe"></i> Language
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">English</a></li>
+                            <li><a class="dropdown-item" href="#">Indonesia</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="container mt-3">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="products.html">Products</a></li>
+                <li class="breadcrumb-item active product-title" aria-current="page">Antimicrobial Bed Sheets</li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- Product Detail Section -->
+    <section class="product-detail-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="product-gallery">
+                        <div class="main-image">
+                            <img src="https://images.unsplash.com/photo-1631248055158-edec7a3c072b?q=80&w=2069&auto=format&fit=crop" alt="Product Image" class="img-fluid rounded product-main-image" id="main-product-image">
+                        </div>
+                        <div class="thumbnail-images mt-3">
+                            <div class="row">
+                                <div class="col-3">
+                                    <img src="https://images.unsplash.com/photo-1631248055158-edec7a3c072b?q=80&w=2069&auto=format&fit=crop" alt="Thumbnail 1" class="img-fluid rounded thumbnail active" onclick="changeImage(this.src)">
+                                </div>
+                                <div class="col-3">
+                                    <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=2070&auto=format&fit=crop" alt="Thumbnail 2" class="img-fluid rounded thumbnail" onclick="changeImage(this.src)">
+                                </div>
+                                <div class="col-3">
+                                    <img src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?q=80&w=2070&auto=format&fit=crop" alt="Thumbnail 3" class="img-fluid rounded thumbnail" onclick="changeImage(this.src)">
+                                </div>
+                                <div class="col-3">
+                                    <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1974&auto=format&fit=crop" alt="Thumbnail 4" class="img-fluid rounded thumbnail" onclick="changeImage(this.src)">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="product-info">
+                        <h1 class="product-title">Antimicrobial Bed Sheets</h1>
+                        <div class="product-meta">
+                            <span class="product-category">Hospital</span>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(24 reviews)</span>
+                            </div>
+                        </div>
+                        <div class="product-price">
+                            <span class="price">$45.00 - $120.00</span>
+                            <span class="badge bg-success">In Stock</span>
+                        </div>
+                        <div class="product-description">
+                            <p>Our premium antimicrobial bed sheets are specially designed for healthcare environments. Made from high-quality cotton blend with antimicrobial treatment, these sheets help prevent the growth of bacteria and other microorganisms, contributing to a cleaner and safer patient environment.</p>
+                        </div>
+                        <div class="product-features">
+                            <h4>Key Features</h4>
+                            <ul>
+                                <li>Antimicrobial treatment prevents bacterial growth</li>
+                                <li>Durable and long-lasting fabric</li>
+                                <li>Soft and comfortable for patients</li>
+                                <li>Easy to clean and maintain</li>
+                                <li>Available in various sizes and colors</li>
+                            </ul>
+                        </div>
+                        <div class="product-options">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="size">Size</label>
+                                    <select class="form-select" id="size">
+                                        <option value="single">Single</option>
+                                        <option value="twin">Twin</option>
+                                        <option value="queen">Queen</option>
+                                        <option value="king">King</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="color">Color</label>
+                                    <select class="form-select" id="color">
+                                        <option value="white">White</option>
+                                        <option value="blue">Light Blue</option>
+                                        <option value="green">Mint Green</option>
+                                        <option value="beige">Beige</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="quantity">Quantity</label>
+                                    <div class="input-group">
+                                        <button class="btn btn-outline-secondary" type="button" onclick="decrementQuantity()">-</button>
+                                        <input type="number" class="form-control text-center" id="quantity" value="1" min="1">
+                                        <button class="btn btn-outline-secondary" type="button" onclick="incrementQuantity()">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn btn-primary btn-lg"><i class="fas fa-shopping-cart me-2"></i> Request Quote</button>
+                            <button class="btn btn-outline-primary btn-lg"><i class="fas fa-box me-2"></i> Request Sample</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Details Tabs -->
+    <section class="product-tabs-section">
+        <div class="container">
+            <ul class="nav nav-tabs" id="productTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="description-tab" data-bs-toggle="tab" data-bs-target="#description" type="button" role="tab" aria-controls="description" aria-selected="true">Description</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="specifications-tab" data-bs-toggle="tab" data-bs-target="#specifications" type="button" role="tab" aria-controls="specifications" aria-selected="false">Specifications</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="reviews-tab" data-bs-toggle="tab" data-bs-target="#reviews" type="button" role="tab" aria-controls="reviews" aria-selected="false">Reviews</button>
+                </li>
+            </ul>
+            <div class="tab-content" id="productTabsContent">
+                <div class="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="description-tab">
+                    <div class="p-4">
+                        <h4>Product Description</h4>
+                        <p>PrimaTex Antimicrobial Bed Sheets are specifically designed for healthcare environments where cleanliness and infection control are paramount. Our sheets are made from a premium cotton-polyester blend that provides both comfort and durability, while our proprietary antimicrobial treatment helps prevent the growth of bacteria, fungi, and other microorganisms.</p>
+                        
+                        <p>These bed sheets are ideal for hospitals, clinics, nursing homes, and other healthcare facilities. They are designed to withstand frequent washing at high temperatures without losing their antimicrobial properties or color fastness.</p>
+                        
+                        <h5>Benefits</h5>
+                        <ul>
+                            <li>Reduces the risk of healthcare-associated infections</li>
+                            <li>Provides a comfortable and hygienic environment for patients</li>
+                            <li>Durable construction saves on replacement costs</li>
+                            <li>Easy to clean and maintain</li>
+                            <li>Available in various sizes to fit all standard hospital beds</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="specifications" role="tabpanel" aria-labelledby="specifications-tab">
+                    <div class="p-4">
+                        <h4>Technical Specifications</h4>
+                        <table class="table table-bordered">
+                            <tbody>
+                                <tr>
+                                    <th>Material</th>
+                                    <td>60% Cotton, 40% Polyester</td>
+                                </tr>
+                                <tr>
+                                    <th>Thread Count</th>
+                                    <td>200-250</td>
+                                </tr>
+                                <tr>
+                                    <th>Antimicrobial Treatment</th>
+                                    <td>Silver Ion Technology</td>
+                                </tr>
+                                <tr>
+                                    <th>Available Sizes</th>
+                                    <td>Single, Twin, Queen, King</td>
+                                </tr>
+                                <tr>
+                                    <th>Available Colors</th>
+                                    <td>White, Light Blue, Mint Green, Beige</td>
+                                </tr>
+                                <tr>
+                                    <th>Washing Instructions</th>
+                                    <td>Machine washable up to 90°C (194°F)</td>
+                                </tr>
+                                <tr>
+                                    <th>Certifications</th>
+                                    <td>OEKO-TEX® Standard 100, ISO 9001</td>
+                                </tr>
+                                <tr>
+                                    <th>Minimum Order Quantity</th>
+                                    <td>50</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
+                    <div class="p-4">
+                        <h4>Customer Reviews</h4>
+                        <div class="review-summary">
+                            <div class="overall-rating">
+                                <span class="rating-value">4.5</span>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span class="review-count">Based on 24 reviews</span>
+                            </div>
+                        </div>
+                        
+                        <div class="review-list mt-4">
+                            <div class="review-item">
+                                <div class="review-header">
+                                    <div class="reviewer">
+                                        <h5>Jakarta General Hospital</h5>
+                                        <div class="stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <span class="review-date">15 May 2023</span>
+                                </div>
+                                <p>We've been using PrimaTex antimicrobial sheets for over a year now, and they have significantly reduced our infection rates. The quality is excellent, and they maintain their properties even after numerous washes.</p>
+                            </div>
+                            
+                            <div class="review-item">
+                                <div class="review-header">
+                                    <div class="reviewer">
+                                        <h5>Surabaya Medical Center</h5>
+                                        <div class="stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <span class="review-date">3 April 2023</span>
+                                </div>
+                                <p>Good quality sheets that have held up well to our rigorous washing protocols. Patients have commented on their comfort. The only improvement could be more color options.</p>
+                            </div>
+                            
+                            <div class="review-item">
+                                <div class="review-header">
+                                    <div class="reviewer">
+                                        <h5>Bali International Clinic</h5>
+                                        <div class="stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                        </div>
+                                    </div>
+                                    <span class="review-date">12 February 2023</span>
+                                </div>
+                                <p>Excellent product that delivers on its promises. The antimicrobial properties have been tested and verified by our lab. Highly recommended for any healthcare facility.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Products -->
+    <section class="related-products-section">
+        <div class="container">
+            <h2 class="section-title">Related Products</h2>
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1581056771107-24ca5f033842?q=80&w=2070&auto=format&fit=crop" alt="Medical Uniforms" class="img-fluid">
+                            <div class="product-overlay">
+                                <a href="product-detail.html?id=2" class="btn btn-sm btn-primary">View Details</a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Medical Uniforms</h3>
+                            <div class="product-meta">
+                                <span class="product-category">Hospital</span>
+                                <span class="product-price">$35.00 - $85.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2053&auto=format&fit=crop" alt="Patient Gowns" class="img-fluid">
+                            <div class="product-overlay">
+                                <a href="product-detail.html?id=3" class="btn btn-sm btn-primary">View Details</a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Patient Gowns</h3>
+                            <div class="product-meta">
+                                <span class="product-category">Hospital</span>
+                                <span class="product-price">$18.00 - $40.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?q=80&w=2070&auto=format&fit=crop" alt="Hospital Pillowcases" class="img-fluid">
+                            <div class="product-overlay">
+                                <a href="product-detail.html?id=10" class="btn btn-sm btn-primary">View Details</a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Hospital Pillowcases</h3>
+                            <div class="product-meta">
+                                <span class="product-category">Hospital</span>
+                                <span class="product-price">$12.00 - $30.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1974&auto=format&fit=crop" alt="Hospital Blankets" class="img-fluid">
+                            <div class="product-overlay">
+                                <a href="product-detail.html?id=11" class="btn btn-sm btn-primary">View Details</a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Hospital Blankets</h3>
+                            <div class="product-meta">
+                                <span class="product-category">Hospital</span>
+                                <span class="product-price">$28.00 - $65.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="footer-brand">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/20221008_060155.jpg-bNEwttb0WtrFNqUkyiR5zAnNwWvl80.jpeg" alt="PrimaTex Logo" class="logo">
+                        <span class="brand-text">PrimaTex</span>
+                    </div>
+                    <p>Premium textile solutions for hospitality, healthcare, and food service industries.</p>
+                </div>
+                <div class="col-lg-2">
+                    <h5>Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5>Product Categories</h5>
+                    <ul class="footer-links">
+                        <li><a href="products.html#hospital">Hospital Textiles</a></li>
+                        <li><a href="products.html#hotel">Hotel Textiles</a></li>
+                        <li><a href="products.html#restaurant">Restaurant Textiles</a></li>
+                        <li><a href="products.html#custom">Custom Solutions</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5>Connect With Us</h5>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 PrimaTex. All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Product image gallery
+        function changeImage(src) {
+            document.getElementById('main-product-image').src = src;
+            
+            // Update active thumbnail
+            document.querySelectorAll('.thumbnail').forEach(thumb => {
+                thumb.classList.remove('active');
+                if (thumb.src === src) {
+                    thumb.classList.add('active');
+                }
+            });
+        }
+        
+        // Quantity increment/decrement
+        function incrementQuantity() {
+            const quantityInput = document.getElementById('quantity');
+            quantityInput.value = parseInt(quantityInput.value) + 1;
+        }
+        
+        function decrementQuantity() {
+            const quantityInput = document.getElementById('quantity');
+            const currentValue = parseInt(quantityInput.value);
+            if (currentValue > 1) {
+                quantityInput.value = currentValue - 1;
+            }
+        }
+        
+        // Load product details based on URL parameter
+        document.addEventListener('DOMContentLoaded', function() {
+            // This would normally fetch product data from a database
+            // For demo purposes, we're just showing the default product
+            
+            // Get product ID from URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const productId = urlParams.get('id');
+            
+            if (productId) {
+                console.log('Loading product ID:', productId);
+                // In a real application, you would fetch product data here
+            }
+        });
+    </script>
+</body>
+</html>

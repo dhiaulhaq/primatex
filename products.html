@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - PrimaTex</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/20221008_060155.jpg-bNEwttb0WtrFNqUkyiR5zAnNwWvl80.jpeg" alt="PrimaTex Logo" class="logo">
+                <span class="brand-text">PrimaTex</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="products.html">Products</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-globe"></i> Language
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">English</a></li>
+                            <li><a class="dropdown-item" href="#">Indonesia</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Our Products</h1>
+            <p>Discover our premium textile solutions for various industries</p>
+        </div>
+    </section>
+
+    <!-- Product Filters -->
+    <section class="product-filters">
+        <div class="container">
+            <div class="filter-wrapper">
+                <div class="filter-group">
+                    <label>Category:</label>
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-filter active" data-filter="all">All</button>
+                        <button type="button" class="btn btn-filter" data-filter="hospital">Hospital</button>
+                        <button type="button" class="btn btn-filter" data-filter="hotel">Hotel</button>
+                        <button type="button" class="btn btn-filter" data-filter="restaurant">Restaurant</button>
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <label>Sort by:</label>
+                    <select class="form-select form-select-sm">
+                        <option>Featured</option>
+                        <option>Price: Low to High</option>
+                        <option>Price: High to Low</option>
+                        <option>Newest</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section">
+        <div class="container">
+            <div class="row" id="hospital">
+                <div class="col-12">
+                    <h2 class="category-title">Hospital Textiles</h2>
+                </div>
+                
+                <!-- Hospital Products -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1631248055158-edec7a3c072b?q=80&w=2069&auto=format&fit=crop" alt="Hospital Bed Sheets" class="img-fluid">
+                            <div class="product-overlay">
+                                <a href="product-detail.html?id=1" class="btn btn-sm btn-primary">View Details</a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Antimicrobial Bed Sheets</h3>
+                            <p>Premium quality antimicrobial bed sheets for hospitals and clinics.</p>
+                            <div class="product-meta">
+                                <span class="product-category">Hospital</span>
+                                <span class="product-price">$45.00 - $120.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-sm-6">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1581056771107-24ca5f033842?q=80&w=2070&auto=format&fit=crop" alt="Medical Uniforms" class="img-fluid">
+                            <div class="product-overlay">
+                                <a href="product-detail.html?id=2" class="btn btn-sm btn-primary">View Details</a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Medical Uniforms</h3>
+                            <p>Comfortable and durable medical uniforms for healthcare professionals.</p>
+                            <div class="product-meta">
+                                <span class="product-category">Hospital</span>
+                                <span class="product-price">$35.00 - $85.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-sm-6">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2053&auto=format&fit=crop" alt="Patient Gowns" class="img-fluid">
+                            <div class="product-overlay">
+                                <a href="product-detail.html?id=3" class="btn btn-sm btn-primary">View Details</a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Patient Gowns</h3>
+                            <p>Comfortable and dignified patient gowns with easy access for medical procedures.</p>
+                            <div class="product-meta">
+                                <span class="product-category">Hospital</span>
+                                <span class="product-price">$18.00 - $40.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-5" id="hotel">
+                <div class="col-12">
+                    <h2 class="category-title">Hotel Textiles</h2>
+                </div>
+                
+                <!-- Hotel Products -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?q=80&w=2057&auto=format&fit=crop" alt="Luxury Bed Linens" class="img-fluid">
+                            <div class="product-overlay">
+                                <a href="product-detail.html?id=4" class="btn btn-sm btn-primary">View Details</a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Luxury Bed Linens</h3>
+                            <p>High thread count luxury bed linens for premium hotel experiences.</p>
+                            <div class="product-meta">
+                                <span class="product-category">Hotel</span>
+                                <span class="product-price">$75.00 - $250.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-sm-6">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1563453392212-326f5e854473?q=80&w=2070&auto=format&fit=crop" alt="Premium Towels" class="img-fluid">
+                            <div class="product-overlay">
+                                <a href="product-detail.html?id=5" class="btn btn-sm btn-primary">View Details</a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Premium Towels</h3>
+                            <p>Soft, absorbent, and durable towels for luxury hotels and resorts.</p>
+                            <div class="product-meta">
+                                <span class="product-category">Hotel</span>
+                                <span class="product-price">$25.00 - $120.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-sm-6">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1584132905271-512c958d674a?q=80&w=2070&auto=format&fit=crop" alt="Bathrobes" class="img-fluid">
+                            <div class="product-overlay">
+                                <a href="product-detail.html?id=6" class="btn btn-sm btn-primary">View Details</a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Luxury Bathrobes</h3>
+                            <p>Plush and comfortable bathrobes for hotel and spa guests.</p>
+                            <div class="product-meta">
+                                <span class="product-category">Hotel</span>
+                                <span class="product-price">$45.00 - $95.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-5" id="restaurant">
+                <div class="col-12">
+                    <h2 class="category-title">Restaurant Textiles</h2>
+                </div>
+                
+                <!-- Restaurant Products -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop" alt="Table Linens" class="img-fluid">
+                            <div class="product-overlay">
+                                <a href="product-detail.html?id=7" class="btn btn-sm btn-primary">View Details</a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Premium Table Linens</h3>
+                            <p>Elegant and stain-resistant table linens for fine dining establishments.</p>
+                            <div class="product-meta">
+                                <span class="product-category">Restaurant</span>
+                                <span class="product-price">$35.00 - $150.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-sm-6">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1581299894007-aaa50297cf16?q=80&w=1974&auto=format&fit=crop" alt="Chef Uniforms" class="img-fluid">
+                            <div class="product-overlay">
+                                <a href="product-detail.html?id=8" class="btn btn-sm btn-primary">View Details</a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Chef Uniforms</h3>
+                            <p>Professional chef coats, pants, and aprons for culinary staff.</p>
+                            <div class="product-meta">
+                                <span class="product-category">Restaurant</span>
+                                <span class="product-price">$40.00 - $120.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-sm-6">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1603251579431-8041402bdeda?q=80&w=2070&auto=format&fit=crop" alt="Napkins" class="img-fluid">
+                            <div class="product-overlay">
+                                <a href="product-detail.html?id=9" class="btn btn-sm btn-primary">View Details</a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Premium Napkins</h3>
+                            <p>High-quality cloth napkins in various colors and designs for restaurants.</p>
+                            <div class="product-meta">
+                                <span class="product-category">Restaurant</span>
+                                <span class="product-price">$15.00 - $45.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="footer-brand">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/20221008_060155.jpg-bNEwttb0WtrFNqUkyiR5zAnNwWvl80.jpeg" alt="PrimaTex Logo" class="logo">
+                        <span class="brand-text">PrimaTex</span>
+                    </div>
+                    <p>Premium textile solutions for hospitality, healthcare, and food service industries.</p>
+                </div>
+                <div class="col-lg-2">
+                    <h5>Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5>Product Categories</h5>
+                    <ul class="footer-links">
+                        <li><a href="#hospital">Hospital Textiles</a></li>
+                        <li><a href="#hotel">Hotel Textiles</a></li>
+                        <li><a href="#restaurant">Restaurant Textiles</a></li>
+                        <li><a href="#custom">Custom Solutions</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5>Connect With Us</h5>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 PrimaTex. All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Product filter functionality
+        document.querySelectorAll('.btn-filter').forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove active class from all buttons
+                document.querySelectorAll('.btn-filter').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                // Get filter value
+                const filter = this.getAttribute('data-filter');
+                
+                // Filter products
+                if (filter === 'all') {
+                    document.querySelectorAll('.product-card').forEach(card => {
+                        card.style.display = 'block';
+                    });
+                } else {
+                    document.querySelectorAll('.product-card').forEach(card => {
+                        const category = card.querySelector('.product-category').textContent.toLowerCase();
+                        if (category === filter) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

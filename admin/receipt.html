@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receipt - PrimaTex Admin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/20221008_060155.jpg-bNEwttb0WtrFNqUkyiR5zAnNwWvl80.jpeg" alt="PrimaTex Logo">
+                <span class="brand-text">PrimaTex</span>
+            </div>
+            <div class="sidebar-menu">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a href="dashboard.html" class="nav-link">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="products.html" class="nav-link">
+                            <i class="fas fa-box"></i>
+                            <span>Products</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="categories.html" class="nav-link">
+                            <i class="fas fa-tags"></i>
+                            <span>Categories</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="invoice.html" class="nav-link">
+                            <i class="fas fa-file-invoice-dollar"></i>
+                            <span>Invoice</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="receipt.html" class="nav-link active">
+                            <i class="fas fa-receipt"></i>
+                            <span>Receipt</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="offering.html" class="nav-link">
+                            <i class="fas fa-handshake"></i>
+                            <span>Offering</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="customer.html" class="nav-link">
+                            <i class="fas fa-users"></i>
+                            <span>Customers</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="users.html" class="nav-link">
+                            <i class="fas fa-user-shield"></i>
+                            <span>Users</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="information.html" class="nav-link">
+                            <i class="fas fa-info-circle"></i>
+                            <span>Information</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="sidebar-footer">
+                <a href="login.html" class="nav-link">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Header -->
+            <header class="main-header">
+                <button class="toggle-sidebar">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="header-right">
+                    <div class="dropdown">
+                        <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-bell"></i>
+                            <span class="badge bg-danger rounded-pill">3</span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><h6 class="dropdown-header">Notifications</h6></li>
+                            <li>
+                                <a class="dropdown-item notification-item" href="#">
+                                    <div class="notification-title">New Order</div>
+                                    <div class="notification-text">You have received a new order from Jakarta General Hospital</div>
+                                    <div class="notification-time">2 hours ago</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item notification-item" href="#">
+                                    <div class="notification-title">Low Stock Alert</div>
+                                    <div class="notification-text">Antimicrobial Bed Sheets are running low</div>
+                                    <div class="notification-time">5 hours ago</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item notification-item" href="#">
+                                    <div class="notification-title">New Review</div>
+                                    <div class="notification-text">A customer has left a new review</div>
+                                    <div class="notification-time">1 day ago</div>
+                                </a>
+                            </li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item text-center" href="#">View All Notifications</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown user-dropdown">
+                        <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                            <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="User" class="user-avatar">
+                            <span>Admin User</span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-user"></i> Profile</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="login.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Body -->
+            <div class="main-body">
+                <div class="page-title">
+                    <h1>Create Receipt</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="dashboard.html">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Receipt</li>
+                        </ol>
+                    </nav>
+                </div>
+
+                <div class="form-card">
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <h5 class="form-title">Receipt Information</h5>
+                        </div>
+                        <div class="col-md-6 text-end">
+                            <button class="btn btn-outline-primary me-2">
+                                <i class="fas fa-save"></i> Save Draft
+                            </button>
+                            <button class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i> Generate Receipt
+                            </button>
+                        </div>
+                    </div>
+
+                    <form>
+                        <div class="row mb-4">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="receiptNumber" class="form-label">Receipt Number</label>
+                                    <input type="text" class="form-control" id="receiptNumber" value="RCP-2023-0038" readonly>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="receiptDate" class="form-label">Receipt Date</label>
+                                    <input type="date" class="form-control" id="receiptDate" value="2023-05-20">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="invoiceReference" class="form-label">Invoice Reference</label>
+                                    <select class="form-select" id="invoiceReference">
+                                        <option value="">Select Invoice</option>
+                                        <option value="INV-2023-0042" selected>INV-2023-0042 (Jakarta General Hospital)</option>
+                                        <option value="INV-2023-0041">INV-2023-0041 (Grand Hyatt Jakarta)</option>
+                                        <option value="INV-2023-0040">INV-2023-0040 (Surabaya Medical Center)</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="paymentMethod" class="form-label">Payment Method</label>
+                                    <select class="form-select" id="paymentMethod">
+                                        <option>Bank Transfer</option>
+                                        <option>Credit Card</option>
+                                        <option>Cash</option>
+                                        <option>Check</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="paymentReference" class="form-label">Payment Reference</label>
+                                    <input type="text" class="form-control" id="paymentReference" placeholder="e.g., Transaction ID, Check Number">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="receiptStatus" class="form-label">Status</label>
+                                    <select class="form-select" id="receiptStatus">
+                                        <option>Draft</option>
+                                        <option selected>Completed</option>
+                                        <option>Cancelled</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mb-4">
+                            <div class="col-md-6">
+                                <h6 class="mb-3">From</h6>
+                                <div class="border rounded p-3 mb-3">
+                                    <p class="mb-1"><strong>PrimaTex</strong></p>
+                                    <p class="mb-1">123 Textile Street</p>
+                                    <p class="mb-1">Jakarta, Indonesia 12345</p>
+                                    <p class="mb-1">Phone: +62 21 1234 5678</p>
+                                    <p class="mb-0">Email: info@primatex.com</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <h6 class="mb-3">Received From</h6>
+                                <div class="mb-3">
+                                    <label for="customerSelect" class="form-label">Select Customer</label>
+                                    <select class="form-select" id="customerSelect">
+                                        <option value="">Select a customer</option>
+                                        <option value="1" selected>Jakarta General Hospital</option>
+                                        <option value="2">Grand Hyatt Jakarta</option>
+                                        <option value="3">Surabaya Medical Center</option>
+                                        <option value="4">Bali International Clinic</option>
+                                        <option value="5">Plataran Group</option>
+                                    </select>
+                                </div>
+                                <div class="border rounded p-3">
+                                    <p class="mb-1"><strong>Jakarta General Hospital</strong></p>
+                                    <p class="mb-1">456 Healthcare Avenue</p>
+                                    <p class="mb-1">Jakarta, Indonesia 12345</p>
+                                    <p class="mb-1">Phone: +62 21 8765 4321</p>
+                                    <p class="mb-0">Email: procurement@jgh.com</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mb-4">
+                            <div class="col-md-12">
+                                <h6 class="mb-3">Payment Details</h6>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>Description</th>
+                                                <th>Amount</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Payment for Invoice #INV-2023-0042</td>
+                                                <td>$3,439.38</td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <th>Total Amount Received</th>
+                                                <th>$3,439.38</th>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mb-4">
+                            <div class="col-md-12">
+                                <div class="mb-3">
+                                    <label for="amountInWords" class="form-label">Amount in Words</label>
+                                    <input type="text" class="form-control" id="amountInWords" value="Three Thousand Four Hundred Thirty-Nine Dollars and Thirty-Eight Cents" readonly>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mb-4">
+                            <div class="col-md-12">
+                                <div class="mb-3">
+                                    <label for="notes" class="form-label">Notes</label>
+                                    <textarea class="form-control" id="notes" rows="3" placeholder="Enter any additional notes...">Payment received in full. Thank you for your business.</textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mb-4">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="preparedBy" class="form-label">Prepared By</label>
+                                    <input type="text" class="form-control" id="preparedBy" value="Admin User">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="authorizedSignature" class="form-label">Authorized Signature</label>
+                                    <div class="border rounded p-3 text-center">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Signature.svg/1280px-Signature.svg.png" alt="Signature" height="60">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mt-4">
+                            <div class="col-12 text-end">
+                                <button type="button" class="btn btn-secondary me-2">Cancel</button>
+                                <button type="button" class="btn btn-outline-primary me-2">
+                                    <i class="fas fa-save"></i> Save Draft
+                                </button>
+                                <button type="button" class="btn btn-primary">
+                                    <i class="fas fa-paper-plane"></i> Generate Receipt
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Toggle sidebar
+        document.querySelector('.toggle-sidebar').addEventListener('click', function() {
+            document.querySelector('.sidebar').classList.toggle('expanded');
+            document.querySelector('.main-content').classList.toggle('expanded');
+        });
+    </script>
+</body>
+</html>
